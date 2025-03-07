@@ -1,0 +1,14 @@
+{
+    "user_name":"nikitha",
+	"email":"nikitha@gmail.com",
+	"password":"Nikitha@1234",
+    "role":"user"
+}
+
+
+{
+    "user_name":"niks",
+	"email":"niks@gmail.com",
+	"password":"Niks@1234",
+    "role":"admin"
+}
