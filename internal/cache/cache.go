@@ -18,7 +18,7 @@ type CacheInterface interface {
 	GetAllUsersFromCache(ctx context.Context, key string) ([]models.FetchAllUsers, error)
 }
 
-func NewCache(rdb redis.Client) *Cache {
+func NewCache(rdb redis.Client) CacheInterface {
 	return &Cache{
 		rdb: rdb,
 	}

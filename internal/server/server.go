@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func StartApplicationServer(h *handler.Handler, m *middleware.Middleware) {
+func StartApplicationServer(h handler.HandlerInterface, m middleware.MiddlewareInterface) {
 	router := gin.Default()
 
 	// Public routes (No authentication required)
@@ -36,4 +36,3 @@ func StartApplicationServer(h *handler.Handler, m *middleware.Middleware) {
 
 	router.Run()
 }
-

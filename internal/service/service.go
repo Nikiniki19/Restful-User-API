@@ -23,7 +23,7 @@ type ServiceInterface interface {
 	DeleteUserByID(ctx context.Context, id int) (models.SignupUsersResp, error)
 }
 
-func NewService(repo repository.RepositoryInterface, auth auth.AuthInterface, rdb cache.CacheInterface) (*Service, error) {
+func NewService(repo repository.RepositoryInterface, auth auth.AuthInterface, rdb cache.CacheInterface) (ServiceInterface, error) {
 	return &Service{
 		Repo: repo,
 		Auth: auth,

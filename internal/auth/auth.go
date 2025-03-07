@@ -11,7 +11,7 @@ type AuthInterface interface {
 	ValidateToken(token string) (Claims, error)
 }
 
-func NewAuth(signinkey string) (*Authentication, error) {
+func NewAuth(signinkey string) (AuthInterface, error) {
 	return &Authentication{
 		SignInKey: signinkey,
 	}, nil

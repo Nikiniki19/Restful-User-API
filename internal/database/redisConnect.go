@@ -22,5 +22,4 @@ func RedisConnect() (*redis.Client, error) {
 		return nil, err
 	}
 	return rdb, nil
-
 }

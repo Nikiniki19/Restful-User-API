@@ -19,7 +19,7 @@ type HandlerInterface interface {
 	DeleteUserByID(c *gin.Context)
 }
 
-func NewHandler(ser service.ServiceInterface) (*Handler, error) {
+func NewHandler(ser service.ServiceInterface) (HandlerInterface, error) {
 	return &Handler{
 		Ser: ser,
 	}, nil

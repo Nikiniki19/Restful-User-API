@@ -21,7 +21,7 @@ type RepositoryInterface interface {
 	DeleteUserByID(ctx context.Context, id int) (models.SignupUsersResp, error)
 }
 
-func NewRepository(db *gorm.DB) (*DBRepository, error) {
+func NewRepository(db *gorm.DB) (RepositoryInterface, error) {
 	if db == nil {
 		return nil, errors.New("db cannot be nil")
 	}
